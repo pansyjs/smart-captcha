@@ -6,28 +6,12 @@ import React, {
 } from 'react';
 import { NVCOption } from './config';
 
+import type { SmartCaptchaProps, SmartCaptchaRef } from './types';
+
 declare const smartCaptcha: any;
 declare const NVC_Opt: any;
 
-interface SmartCaptchaSuccessData {
-  token?: string;
-  sessionId?: string;
-  sig?: string;
-  appKey?: string;
-  scene?: string;
-}
-
-export interface SmartCaptchaProps {
-  className?: string;
-  style?: React.CSSProperties;
-  elementId?: string;
-  width?: number;
-  height?: number;
-  onSuccess?: (data: SmartCaptchaSuccessData) => void;
-  onFailed?: () => void;
-}
-
-const SmartCaptcha: React.ForwardRefRenderFunction<any, SmartCaptchaProps> = (
+const SmartCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SmartCaptchaProps> = (
   props,
   ref,
 ) => {

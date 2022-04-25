@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { ApiLoader } from './api-loader';
 import BaseSmartCaptcha from './smart-captcha';
 
-import { SmartCaptchaProps } from './smart-captcha';
+import type { SmartCaptchaProps, SmartCaptchaRef } from './types';
 
-export const SmartCaptcha: React.FC<SmartCaptchaProps> = (props) => {
+const InternalSmartCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SmartCaptchaProps> = (props, ref) => {
   return (
     <ApiLoader>
-      <BaseSmartCaptcha {...props} />
+      <BaseSmartCaptcha {...props} ref={ref} />
     </ApiLoader>
   )
 }
+
+export const SmartCaptcha = forwardRef(InternalSmartCaptcha);
+
+export type {
+  SmartCaptchaData,
+  SmartCaptchaProps,
+} from './types';
