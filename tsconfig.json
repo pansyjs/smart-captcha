@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "rootDirs": ["src", "config"],
+    "target": "ES6",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "allowJs": true,
+    "declaration": false,
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "downlevelIteration": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "lib": ["ES2015", "DOM"],
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "lib", "es", "dist", ".dumi"]
+}
