@@ -23,8 +23,12 @@ pnpm i @pansy/smart-captcha
 
 ```ts
 import { SmartCaptcha } from '@pansy/smart-captcha';
+
+export default () => {
+  <SmartCaptcha />
+}
 ```
 
-## 代码示例
+## 示例
 
-<code src="./demo/demo01.tsx" />
+<code src="./demo/demo01.tsx"  />

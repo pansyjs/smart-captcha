@@ -21,8 +21,10 @@ pnpm i @pansy/smart-captcha
 
 ## 🔨 使用
 
-```ts
+```tsx
 import { SmartCaptcha } from '@pansy/smart-captcha';
 
-
+export default () => {
+  <SmartCaptcha />
+}
 ```
