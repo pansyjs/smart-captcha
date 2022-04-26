@@ -3,7 +3,7 @@ import { useExternal, useBoolean } from '@pansy/react-hooks';
 
 import { NVCOption } from './config';
 
-window.globalThis.NVC_Opt = NVCOption;
+window.NVC_Opt = NVCOption;
 
 export const ApiLoader: React.FC = ({
   children,
