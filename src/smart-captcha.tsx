@@ -6,7 +6,7 @@ import React, {
 } from 'react';
 import { NVCOption } from './config';
 
-import type { SmartCaptchaProps, SmartCaptchaRef } from './types';
+import type { SmartCaptchaProps, SmartCaptchaResult, SmartCaptchaRef, } from './types';
 
 declare const smartCaptcha: any;
 declare const NVC_Opt: any;
@@ -22,6 +22,7 @@ const SmartCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SmartCaptcha
     width = 300,
     height = 42,
     onSuccess,
+    onChange,
     onFailed,
   } = props;
 
@@ -29,7 +30,7 @@ const SmartCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SmartCaptcha
 
   useImperativeHandle(ref, () => ({
     reset: () => {
-      ic?.current.reset();
+      ic?.current?.reset();
     },
   }));
 
@@ -51,22 +52,26 @@ const SmartCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SmartCaptcha
         //智能验证组件验证中状态文案。
         scaning_txt: '智能检测中',
         //前端智能验证通过时会触发该回调参数。您可以在该回调参数中将请求标识（token）、会话ID（sessionid）、签名串（sig）字段记录下来，随业务请求一同发送至您的服务端调用验签。
-        success: function(data: any) {
-          onSuccess?.({
+        success: function(data: SmartCaptchaResult) {
+          const value = {
             token: NVC_Opt.token,
             sessionId: data.sessionId,
             sig: data.sig,
             appKey: NVCOption.appkey,
             scene: NVCOption.scene,
-          });
+          }
+          onChange?.(value);
+          onSuccess?.(value);
         },
         fail: function() {
           ic?.current?.reset();
           onFailed?.();
+          onChange?.(undefined);
         },
         error: function() {
           ic?.current?.reset();
           onFailed?.();
+          onChange?.(undefined);
         },
       });
       ic?.current?.init();
