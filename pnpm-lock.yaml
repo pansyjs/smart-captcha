@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@pansy/react-hooks': ^0.9.7
+  '@pansy/react-hooks': ^0.9.8
   '@types/react': '17'
   '@types/react-dom': '17'
   '@walrus/cli': ^1.3.4
@@ -13,7 +13,7 @@ specifiers:
   typescript: ^4.6.3
 
 dependencies:
-  '@pansy/react-hooks': 0.9.7_react@17.0.2
+  '@pansy/react-hooks': 0.9.8_react@17.0.2
 
 devDependencies:
   '@types/react': 17.0.44
@@ -3237,8 +3237,8 @@ packages:
       react: 17.0.2
     dev: false
 
-  /@pansy/react-hooks/0.9.7_react@17.0.2:
-    resolution: {integrity: sha512-bdzx6BYBbVhsiEJXoS8xWPY6JGYncpClwnmjt0EzGvPZMG/hUigg4KA4NTAPAjWFVOS3TopV1pubBcw+DD1OGQ==}
+  /@pansy/react-hooks/0.9.8_react@17.0.2:
+    resolution: {integrity: sha512-HVL3jokPgvxaXpA2JWO2bshPELt09sMttu/PxFC4Hj8XturJNqhYPtvVJs9AypdGt8gEfaHNEmvtVe7KNPRNaw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
@@ -3267,7 +3267,7 @@ packages:
       '@pansy/use-mqtt': 0.1.6_react@17.0.2
       '@pansy/use-previous': 0.2.3_react@17.0.2
       '@pansy/use-raf-state': 0.2.4_react@17.0.2
-      '@pansy/use-request': 0.1.2_react@17.0.2
+      '@pansy/use-request': 0.1.3_react@17.0.2
       '@pansy/use-scroll': 0.2.6_react@17.0.2
       '@pansy/use-selections': 0.2.4_react@17.0.2
       '@pansy/use-session-storage-state': 0.2.6_react@17.0.2
@@ -3279,13 +3279,11 @@ packages:
       '@pansy/use-update': 0.2.3_react@17.0.2
       '@pansy/use-update-effect': 0.2.3_react@17.0.2
       '@pansy/use-update-layout-effect': 0.2.6_react@17.0.2
-      '@pansy/use-url-state': 0.1.3_react@17.0.2
       '@pansy/use-watermark': 0.2.6_react@17.0.2
       '@pansy/use-web-socket': 0.1.4_react@17.0.2
       react: 17.0.2
     transitivePeerDependencies:
       - bufferutil
-      - react-router
       - supports-color
       - utf-8-validate
     dev: false
@@ -3534,8 +3532,8 @@ packages:
       react: 17.0.2
     dev: false
 
-  /@pansy/use-request/0.1.2_react@17.0.2:
-    resolution: {integrity: sha512-/LJy/CgT/KfgJkzQK1rlft6Dm+nBtkN9Bzq5u2gzuHhAQME/yFSOSpzIbZ7SrmasvLSAAIF8ceOjDDNH+oWHNg==}
+  /@pansy/use-request/0.1.3_react@17.0.2:
+    resolution: {integrity: sha512-XfaPitJvC0WBAn/Uua5eapeLrGq5hFyQe7ctSsUT7wd2xlSpdyIEJSt/rMUHZgjbb1wcbE/4BrUBnpMUDayd0Q==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
@@ -3648,18 +3646,6 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      react: 17.0.2
-    dev: false
-
-  /@pansy/use-url-state/0.1.3_react@17.0.2:
-    resolution: {integrity: sha512-ZOk5G/57QV4gFezC424klJBr7NlMi5Ghm+rnNDmdaSitvIZxVwueDUjSA+BBo4p5iGodANLW331bw/sC8bZmyA==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-router: ^5.0.0 || ^6.0.0
-    dependencies:
-      '@pansy/use-memoized-fn': 0.2.4_react@17.0.2
-      '@pansy/use-update': 0.2.3_react@17.0.2
-      query-string: 7.1.1
       react: 17.0.2
     dev: false
 
@@ -5946,6 +5932,7 @@ packages:
   /decode-uri-component/0.2.0:
     resolution: {integrity: sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=}
     engines: {node: '>=0.10'}
+    dev: true
 
   /decompress-response/6.0.0:
     resolution: {integrity: sha512-aW35yZM6Bb/4oJlZncMH2LCoZtJXTRxES17vE3hoRiowU2kWHaJKFkSBDnDR+cm9J+9QhXmREyIfv0pji9ejCQ==}
@@ -6878,6 +6865,7 @@ packages:
   /filter-obj/1.1.0:
     resolution: {integrity: sha1-mzERErxsYSehbgFsbF1/GeCAXFs=}
     engines: {node: '>=0.10.0'}
+    dev: true
 
   /find-cache-dir/2.1.0:
     resolution: {integrity: sha512-Tq6PixE0w/VMFfCgbONnkiQIVol/JJL7nRMi20fqzA4NRs9AfeqMGeRdPi3wIhYkxjeBaWh2rxwapn5Tu3IqOQ==}
@@ -10324,16 +10312,6 @@ packages:
       strict-uri-encode: 2.0.0
     dev: true
 
-  /query-string/7.1.1:
-    resolution: {integrity: sha512-MplouLRDHBZSG9z7fpuAAcI7aAYjDLhtsiVZsevsfaHWDS2IDdORKbSd1kWUA+V4zyva/HZoSfpwnYMMQDhb0w==}
-    engines: {node: '>=6'}
-    dependencies:
-      decode-uri-component: 0.2.0
-      filter-obj: 1.1.0
-      split-on-first: 1.1.0
-      strict-uri-encode: 2.0.0
-    dev: false
-
   /querystring-es3/0.2.1:
     resolution: {integrity: sha1-nsYfeQSYdXB9aUFFlv2Qek1xHnM=}
     engines: {node: '>=0.4.x'}
@@ -11448,6 +11426,7 @@ packages:
   /split-on-first/1.1.0:
     resolution: {integrity: sha512-43ZssAJaMusuKWL8sKUBQXHWOpq8d6CfN/u1p4gUzfJkM05C8rxTmYrkIPTXapZpORA6LkkzcUulJ8FqA7Uudw==}
     engines: {node: '>=6'}
+    dev: true
 
   /split/1.0.1:
     resolution: {integrity: sha512-mTyOoPbrivtXnwnIxZRFYRrPNtEFKlpB2fvjSnCQUiAA6qAZzqwna5envK4uk6OIeP17CsdF3rSBGYVBsU0Tkg==}
@@ -11524,6 +11503,7 @@ packages:
   /strict-uri-encode/2.0.0:
     resolution: {integrity: sha1-ucczDHBChi9rFC3CdLvMWGbONUY=}
     engines: {node: '>=4'}
+    dev: true
 
   /string-width/1.0.2:
     resolution: {integrity: sha1-EYvfW4zcUaKn5w0hHgfisLmxB9M=}
