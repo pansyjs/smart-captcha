@@ -7,6 +7,13 @@ const config: IConfig = {
   favicon:
     'https://gw.alipayobjects.com/zos/bmw-prod/69a27fcc-ce52-4f27-83f1-c44541e9b65d.svg',
   hash: true,
+  navs: [
+    null,
+    {
+      title: 'GitHub',
+      path: 'https://github.com/pansyjs/smart-captcha',
+    },
+  ],
 }
 
 export default config;
