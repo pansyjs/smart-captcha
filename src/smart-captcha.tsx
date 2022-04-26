@@ -12,10 +12,7 @@ declare const smartCaptcha: any;
 declare const NVC_Opt: any;
 
 const SmartCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SmartCaptchaProps> = (
-  props,
-  ref,
-) => {
-  const {
+  {
     className,
     style,
     elementId = 'smart-captcha',
@@ -24,8 +21,9 @@ const SmartCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SmartCaptcha
     onSuccess,
     onChange,
     onFailed,
-  } = props;
-
+  },
+  ref,
+) => {
   const ic = useRef<any>();
 
   useImperativeHandle(ref, () => ({
@@ -74,7 +72,7 @@ const SmartCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SmartCaptcha
           onChange?.(undefined);
         },
       });
-      ic?.current?.init();
+      ic.current.init();
     }
   }, []);
 

@@ -6,9 +6,7 @@ export interface SmartCaptchaResult {
 }
 
 export class SmartCaptcha {
-  constructor() {
-
-  }
+  constructor() {}
 }
 
 export interface SmartCaptchaData extends SmartCaptchaResult {
