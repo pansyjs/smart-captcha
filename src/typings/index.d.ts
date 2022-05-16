@@ -1,3 +1,4 @@
 interface Window {
-  NVC_Opt: any;
+  ic: any;
+  AWSC: any;
 }

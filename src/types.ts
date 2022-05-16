@@ -3,6 +3,7 @@ import type { CSSProperties } from 'react';
 export interface SmartCaptchaResult {
   sessionId: string;
   sig: string;
+  token: string;
 }
 
 export class SmartCaptcha {
