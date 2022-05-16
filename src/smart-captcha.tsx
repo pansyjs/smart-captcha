@@ -13,6 +13,8 @@ const SmartCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SmartCaptcha
     className,
     style,
     elementId = 'smart-captcha',
+    appkey = Option.appkey,
+    scene = Option.scene,
     width = 300,
     height = 42,
     onSuccess,
@@ -48,9 +50,9 @@ const SmartCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SmartCaptcha
           // 智能验证组件验证中状态文案。
           scaning_txt: '智能检测中',
           // 应用类型标识
-          appkey: Option.appkey,
+          appkey,
           // 使用场景标识
-          scene: Option.scene,
+          scene,
           success: function(data: SmartCaptchaResult) {
             const value = {
               sig: data.sig,

@@ -19,8 +19,10 @@ nav:
 |className|节点类名|`string`|-|
 |style|节点样式|`CSSProperties`|-|
 |elementId|渲染的目标元素ID|`string`|-|
-|width|组件宽度|`number`|`300`|
-|height|组件高度|`number`|`42`|
+|appkey|应用类型标识|`string`|-|
+|scene|使用场景标识|`string`|-|
+|width|智能验证组件的宽度|`number`|`300`|
+|height|智能验证组件的高度|`number`|`42`|
 |onSuccess|验证成功回调|`(data) => void`|-|
 |onChange|验证成功/失败回调|`(data) => void`|-|
 |onFailed|验证失败回调|`() => void`|-|

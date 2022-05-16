@@ -17,6 +17,10 @@ export interface SmartCaptchaData extends SmartCaptchaResult {
 }
 
 export interface SmartCaptchaProps {
+  /** 应用类型标识 */
+  appkey?: string;
+  /** 使用场景标识 */
+  scene?: string;
   /** 节点类名 */
   className?: string;
   /** 节点样式 */
