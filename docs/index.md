@@ -2,7 +2,7 @@
 title: Smart Captcha
 hero:
   title: Smart Captcha
-  desc: 灵思核心功能库
+  desc: 阿里巴巴集团提供的一种智能验证码解决方案。
 footer: Open-source MIT Licensed | Copyright © 2020-present
 ---
 
