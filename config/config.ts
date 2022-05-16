@@ -10,6 +10,10 @@ const config: IConfig = {
   navs: [
     null,
     {
+      title: 'Aliyun',
+      path: 'https://help.aliyun.com/document_detail/193144.html',
+    },
+    {
       title: 'GitHub',
       path: 'https://github.com/pansyjs/smart-captcha',
     },
