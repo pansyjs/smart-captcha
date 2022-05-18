@@ -28,3 +28,34 @@ export default () => {
   <SmartCaptcha />
 }
 ```
+
+## 注意：
+
+在 [qiankun](https://qiankun.umijs.org/) 项目中 使用时由于沙盒的原因导致组件加载不出来，可通过 `excludeAssetFilter` 配置排除 `//g.alicdn.com/AWSC/AWSC/awsc.js`;
+
+如果使用 [umi](https://umijs.org/zh-CN/plugins/plugin-qiankun) 只需要在基座项目里中的 `src/app.ts` 文件里添加如下代码即可
+
+```ts
+const cdnUrls =  [
+  '//g.alicdn.com/AWSC/AWSC/awsc.js',
+];
+
+function isQuankuExclude(value: string) {
+  let result = false;
+
+  for (let i = 0; i < cdnUrls.length; i++) {
+    if (value.includes(cdnUrls[i])) {
+      result = true;
+      break;
+    }
+  }
+
+  return result;
+}
+
+export const qiankun = Promise.resolve().then(() => ({
+  excludeAssetFilter: (assetUrl: string) => {
+    return isQuankuExclude(assetUrl);
+  }
+}));
+```

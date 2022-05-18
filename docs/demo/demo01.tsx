@@ -12,9 +12,10 @@ export default () => {
   }
 
   return (
-    <Space direction="horizontal">
+    <Space direction="vertical" size={24}>
       <SmartCaptcha
         ref={ref}
+        elementId="smart-captcha-01"
         onSuccess={(data) => {
           console.log(data);
         }}
