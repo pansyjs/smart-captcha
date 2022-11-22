@@ -27,20 +27,20 @@
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "dependencies": {
-    "@pansy/react-hooks": "^0.12.2"
+    "@pansy/react-hooks": "^1.0.1"
   },
   "devDependencies": {
-    "@types/react": "17",
-    "@types/react-dom": "17",
-    "@umijs/plugin-antd": "^0.15.0",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.9",
+    "@umijs/plugin-antd": "^0.15.2",
     "@walrus/cli": "^1.3.4",
     "@walrus/plugin-release": "^1.14.3",
-    "antd": "^4.20.0",
+    "antd": "^4.24.3",
     "dumi": "^1.1.40",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "tsup": "^5.12.6",
-    "typescript": "^4.6.3"
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.3"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
