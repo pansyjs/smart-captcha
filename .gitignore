@@ -16,6 +16,9 @@ node_modules
 
 # misc
 .DS_Store
+.dumi/tmp
+.dumi/tmp-test
+.dumi/tmp-production
 
 # umi
 /src/.umi

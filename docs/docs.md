@@ -12,11 +12,11 @@ nav:
 
 ### 基本示例
 
-<code src="./demo/demo01.tsx" />
+<code src="./demo/demo01.tsx"></code>
 
 ### 表单示例
 
-<code src="./demo/demo02.tsx" />
+<code src="./demo/demo02.tsx"></code>
 
 ## API
 

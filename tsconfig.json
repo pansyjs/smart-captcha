@@ -16,7 +16,10 @@
     "skipLibCheck": true,
     "strict": true,
     "noImplicitAny": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "paths": {
+      "@@/*": [".dumi/tmp/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules", "lib", "es", "dist", ".dumi"]

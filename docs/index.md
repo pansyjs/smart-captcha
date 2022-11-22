@@ -31,4 +31,4 @@ export default () => {
 
 ## 示例
 
-<code src="./demo/demo01.tsx" inline  />
+<code src="./demo/demo01.tsx" inline></code>
