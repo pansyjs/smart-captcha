@@ -33,6 +33,7 @@
     "@pansy/use-external": "^0.1.5"
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "7.20.11",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.4.0",
     "@types/jest": "^29.2.5",
