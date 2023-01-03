@@ -17,7 +17,7 @@
     "test": "jest",
     "test:strict": "cross-env REACT_MODE=strict jest",
     "test:coverage": "jest --coverage",
-    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
