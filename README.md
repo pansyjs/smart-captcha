@@ -6,9 +6,10 @@
 
 阿里巴巴集团提供的一种智能验证码解决方案。
 
-[![NPM version][image-1]][1]
-[![NPM downloads][image-2]][2]
+[![NPM version][image-1]][npm-url]
+[![NPM downloads][image-2]][npm-url]
 [![codecov][codecov-1]][codecov-2]
+[![license][license-1]][npm-url]
 
 </div>
 
@@ -66,9 +67,9 @@ export const qiankun = Promise.resolve().then(() => ({
 }));
 ```
 
-[1]: https://www.npmjs.com/package/@pansy/smart-captcha
-[2]: https://npmjs.org/package/@pansy/smart-captcha
 [image-1]: https://img.shields.io/npm/v/@pansy/smart-captcha.svg?style=flat
 [image-2]: https://img.shields.io/npm/dw/@pansy/smart-captcha.svg?style=flat
 [codecov-1]: https://codecov.io/github/pansyjs/smart-captcha/branch/master/graph/badge.svg?token=EKYDUW28H0
 [codecov-2]: https://codecov.io/github/pansyjs/smart-captcha
+[license-1]: https://badgen.net/npm/license/@pansy/smart-captcha
+[npm-url]: https://www.npmjs.com/package/@pansy/smart-captcha
