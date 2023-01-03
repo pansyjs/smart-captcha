@@ -3,12 +3,14 @@
 </h1>
 
 <div align="center">
+
 阿里巴巴集团提供的一种智能验证码解决方案。
-</div>
 
 [![NPM version][image-1]][1]
 [![NPM downloads][image-2]][2]
 [![codecov][codecov-1]][codecov-2]
+
+</div>
 
 ## 🏗 安装
 
