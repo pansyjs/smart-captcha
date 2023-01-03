@@ -12,6 +12,8 @@ node_modules
 /lib
 /es
 
+coverage
+
 /report
 
 # misc
