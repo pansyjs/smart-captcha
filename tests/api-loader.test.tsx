@@ -10,9 +10,9 @@ describe('ApiLoader', () => {
   it('renders correctly', async () => {
     const { container } = render(<ApiLoader>children</ApiLoader>);
 
-    const script = document.querySelector('script') as HTMLScriptElement;
+    const script = document.querySelector('script')!;
 
-    act(() => {
+    await act(() => {
       fireEvent.load(script);
     });
 
