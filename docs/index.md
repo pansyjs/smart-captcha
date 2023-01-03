@@ -2,9 +2,13 @@
 title: Smart Captcha
 hero:
   title: Smart Captcha
-  desc: 阿里巴巴集团提供的一种智能验证码解决方案。
+  description: 阿里巴巴集团提供的一种智能验证码解决方案。
 footer: Open-source MIT Licensed | Copyright © 2020-present
 ---
+
+## 📝 阿里集成文档
+
+[前端集成文档](https://help.aliyun.com/document_detail/193144.html)
 
 ## 🏗 安装
 
