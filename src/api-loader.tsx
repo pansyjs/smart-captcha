@@ -1,5 +1,5 @@
 import React from 'react';
-import { useExternal } from '@pansy/react-hooks';
+import { useExternal } from '@pansy/use-external';
 
 export const ApiLoader: React.FC<{ children: React.ReactNode }> = ({
   children,
