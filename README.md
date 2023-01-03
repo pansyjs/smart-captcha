@@ -10,6 +10,7 @@
 [![NPM downloads][image-2]][npm-url]
 [![codecov][codecov-1]][codecov-2]
 [![license][license-1]][npm-url]
+[![issues](https://img.shields.io/github/issues/pansyjs/smart-captcha)](https://github.com/pansyjs/smart-captcha/issues)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/pansyjs/smart-captcha.svg)](http://isitmaintained.com/project/pansyjs/smart-captcha 'Percentage of issues still open')
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/pansyjs/smart-captcha.svg)](http://isitmaintained.com/project/pansyjs/smart-captcha 'Average time to resolve an issue')
 
