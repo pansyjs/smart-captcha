@@ -10,6 +10,8 @@
 [![NPM downloads][image-2]][npm-url]
 [![codecov][codecov-1]][codecov-2]
 [![license][license-1]][npm-url]
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/pansyjs/smart-captcha.svg)](http://isitmaintained.com/project/pansyjs/smart-captcha 'Percentage of issues still open')
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/pansyjs/smart-captcha.svg)](http://isitmaintained.com/project/pansyjs/smart-captcha 'Average time to resolve an issue')
 
 </div>
 
@@ -73,3 +75,4 @@ export const qiankun = Promise.resolve().then(() => ({
 [codecov-2]: https://codecov.io/github/pansyjs/smart-captcha
 [license-1]: https://badgen.net/npm/license/@pansy/smart-captcha
 [npm-url]: https://www.npmjs.com/package/@pansy/smart-captcha
+[issues-1]: https://www.npmjs.com/package/@pansy/smart-captcha
