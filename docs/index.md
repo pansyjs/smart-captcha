@@ -6,9 +6,9 @@ hero:
 footer: Open-source MIT Licensed | Copyright © 2020-present
 ---
 
-## 📝 阿里集成文档
+## 📝 阿里文档
 
-[前端集成文档](https://help.aliyun.com/document_detail/193144.html)
+[文档](https://help.aliyun.com/document_detail/122733.html)
 
 ## 🏗 安装
 

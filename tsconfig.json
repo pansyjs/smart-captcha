@@ -21,6 +21,6 @@
       "@@/*": [".dumi/tmp/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", ".dumi/**/*", ".dumirc.ts"],
   "exclude": ["node_modules", "lib", "es", "dist", ".dumi"]
 }
