@@ -13,6 +13,7 @@
 [![issues](https://img.shields.io/github/issues/pansyjs/smart-captcha)](https://github.com/pansyjs/smart-captcha/issues)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/pansyjs/smart-captcha.svg)](http://isitmaintained.com/project/pansyjs/smart-captcha 'Percentage of issues still open')
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/pansyjs/smart-captcha.svg)](http://isitmaintained.com/project/pansyjs/smart-captcha 'Average time to resolve an issue')
+[![dumi][dumi]][dumi-url]
 
 </div>
 
@@ -81,3 +82,6 @@ export const qiankun = Promise.resolve().then(() => ({
 [license-1]: https://badgen.net/npm/license/@pansy/smart-captcha
 [npm-url]: https://www.npmjs.com/package/@pansy/smart-captcha
 [issues-1]: https://www.npmjs.com/package/@pansy/smart-captcha
+
+[dumi]: https://img.shields.io/badge/docs%20by-dumi-blue
+[dumi-url]: https://d.umijs.org
