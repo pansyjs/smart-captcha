@@ -4,6 +4,9 @@ export default defineConfig({
   themeConfig: {
     name: '智能验证码',
     logo: 'https://gw.alipayobjects.com/zos/bmw-prod/b874caa9-4458-412a-9ac6-a61486180a62.svg',
+    socialLinks: {
+      github: 'https://github.com/pansyjs/smart-captcha',
+    },
   },
   title: 'Smart Captcha',
   favicons: [

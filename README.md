@@ -6,6 +6,7 @@
 
 阿里巴巴集团提供的一种智能验证码解决方案。
 
+![coverage CI][coverage-ci]
 [![NPM version][image-1]][npm-url]
 [![NPM downloads][image-2]][npm-url]
 [![codecov][codecov-1]][codecov-2]
@@ -85,3 +86,5 @@ export const qiankun = Promise.resolve().then(() => ({
 
 [dumi]: https://img.shields.io/badge/docs%20by-dumi-blue
 [dumi-url]: https://d.umijs.org
+
+[coverage-ci]: https://github.com/pansyjs/smart-captcha/workflows/Coverage/badge.svg
