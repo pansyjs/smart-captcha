@@ -38,7 +38,7 @@ const SmartCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SmartCaptcha
   }));
 
   useEffect(() => {
-    if (window.AWSC) {
+    if (window.AWSC && !ic.current) {
       window.AWSC.use('ic', (_: string, module: any) => {
         ic.current = module.init({
           // 声明智能验证需要渲染的目标元素ID。
