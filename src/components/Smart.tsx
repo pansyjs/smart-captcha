@@ -4,9 +4,9 @@ import React, {
   useEffect,
   useImperativeHandle,
 } from 'react';
-import { Option } from './config';
+import { Option } from '../config';
 
-import type { SmartCaptchaProps, SmartCaptchaResult, SmartCaptchaRef, } from './types';
+import type { SmartCaptchaProps, SmartCaptchaResult, SmartCaptchaRef, } from '../types';
 
 const SmartCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SmartCaptchaProps> = (
   {
