@@ -2,15 +2,15 @@
   "name": "@pansy/smart-captcha",
   "version": "3.0.0",
   "description": "阿里巴巴集团提供的一种智能验证码解决方案",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/esm/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "start": "dumi dev",
-    "build": "tsup",
+    "build": "father build",
     "build:site": "dumi build",
     "release": "walrus release",
     "prepare": "dumi setup",
@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/pansyjs/smart-captcha#readme",
   "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
+    "react": ">=16.9.0"
   },
   "dependencies": {
     "@pansy/use-external": "^0.1.5"
@@ -47,11 +47,11 @@
     "antd": "^5.6.2",
     "cross-env": "7.0.3",
     "dumi": "^2.2.1",
+    "father": "^4.5.0",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tsup": "^6.5.0",
     "ts-node": "10.9.1",
     "typescript": "^5.1.3"
   },
