@@ -1,8 +1,6 @@
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import { Button, Space, Form } from 'antd';
-import { SmartCaptcha } from '@pansy/smart-captcha';
-
-import type { SmartCaptchaRef } from '@pansy/smart-captcha';
+import { SmartCaptcha, type SmartCaptchaRef } from '@pansy/smart-captcha';
 
 export default () => {
   const ref = useRef<SmartCaptchaRef>();
@@ -37,6 +35,5 @@ export default () => {
         </Button>
       </Space>
     </Form>
-
   )
 }

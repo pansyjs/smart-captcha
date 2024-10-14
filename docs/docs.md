@@ -18,6 +18,10 @@ nav:
 
 <code src="./demo/demo02.tsx"></code>
 
+### 滑动组件
+
+<code src="./demo/demo03.tsx"></code>
+
 ## API
 
 |属性|描述|类型|默认值|

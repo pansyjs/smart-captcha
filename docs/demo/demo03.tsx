@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Button, Space } from 'antd';
-import { SmartCaptcha, type SmartCaptchaRef } from '@pansy/smart-captcha';
+import { SliderCaptcha, type SmartCaptchaRef } from '@pansy/smart-captcha';
 
 export default () => {
   const ref = useRef<SmartCaptchaRef>();
@@ -11,13 +11,19 @@ export default () => {
 
   return (
     <Space direction="vertical" size={24}>
-      <SmartCaptcha
+      <SliderCaptcha
         ref={ref}
-        elementId="smart-captcha-01"
+        elementId="slider-captcha-01"
+        appkey="CF_APP_1"
+        scene="register"
         onSuccess={(data) => {
           console.log(data);
         }}
+        style={{
+          position: 'relative'
+        }}
       />
+
       <Button onClick={handleRest}>
         重置
       </Button>
