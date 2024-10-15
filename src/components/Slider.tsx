@@ -21,6 +21,7 @@ const SliderCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SliderCaptc
     hideErrorCode,
     fontSize,
     onSuccess,
+    onChange,
     onFailed,
     onError,
   },
@@ -56,14 +57,17 @@ const SliderCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SliderCaptc
               appKey: appkey,
               scene,
             }
+            onChange?.(value);
             onSuccess?.(value);
           },
           fail: function() {
             ic?.current?.reset();
+            onChange?.(undefined);
             onFailed?.();
           },
           error: function() {
             ic?.current?.reset();
+            onChange?.(undefined);
             onError?.();
           },
         })
