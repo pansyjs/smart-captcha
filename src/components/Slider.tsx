@@ -27,18 +27,18 @@ const SliderCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SliderCaptc
   },
   ref,
 ) => {
-  const ic = useRef<any>();
+  const nc = useRef<SmartCaptchaRef>();
 
   useImperativeHandle(ref, () => ({
     reset: () => {
-      ic?.current?.reset();
+      nc?.current?.reset();
     },
   }));
 
   useEffect(() => {
-    if (window.AWSC && !ic.current) {
+    if (window.AWSC && !nc.current) {
       window.AWSC.use('nc', (_: string, module: any) => {
-        ic.current = module.init({
+        nc.current = module.init({
           appkey,
           scene,
           renderTo: `${elementId}`,
@@ -61,12 +61,12 @@ const SliderCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SliderCaptc
             onSuccess?.(value);
           },
           fail: function() {
-            ic?.current?.reset();
+            nc?.current?.reset();
             onChange?.(undefined);
             onFailed?.();
           },
           error: function() {
-            ic?.current?.reset();
+            nc?.current?.reset();
             onChange?.(undefined);
             onError?.();
           },
