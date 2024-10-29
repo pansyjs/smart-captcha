@@ -14,11 +14,11 @@
     "build": "father build",
     "build:site": "dumi build",
     "release": "walrus release",
-    "prepare": "dumi setup",
     "test": "jest",
     "test:strict": "cross-env REACT_MODE=strict jest",
     "test:coverage": "jest --coverage",
-    "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "prepare": "husky || true"
   },
   "repository": {
     "type": "git",
@@ -36,9 +36,12 @@
     "@pansy/use-external": "^0.1.6"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^3.8.0",
     "@babel/plugin-transform-modules-commonjs": "7.22.5",
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "14.0.0",
     "@types/jest": "^29.5.2",
@@ -50,13 +53,17 @@
     "antd": "^5.21.5",
     "cross-env": "7.0.3",
     "dumi": "^2.4.13",
+    "eslint": "^9.13.0",
     "father": "^4.5.1",
+    "husky": "^9.1.6",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
+    "semantic-release": "^24.2.0",
     "ts-node": "10.9.1",
-    "typescript": "^5.1.3"
+    "typescript": "^5.1.3",
+    "vite": "^5.4.10"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
