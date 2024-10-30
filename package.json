@@ -1,14 +1,24 @@
 {
   "name": "@pansy/smart-captcha",
   "version": "3.1.0",
+  "packageManager": "pnpm@9.12.2",
   "description": "阿里巴巴集团提供的一种智能验证码解决方案",
+  "license": "MIT",
+  "homepage": "https://github.com/pansyjs/smart-captcha#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pansyjs/smart-captcha.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pansyjs/smart-captcha/issues"
+  },
+  "sideEffects": false,
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "files": [
     "dist"
   ],
-  "sideEffects": false,
   "scripts": {
     "start": "dumi dev",
     "build": "father build",
@@ -18,17 +28,9 @@
     "test:strict": "cross-env REACT_MODE=strict jest",
     "test:coverage": "jest --coverage",
     "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "preinstall": "npx only-allow pnpm",
     "prepare": "husky || true"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pansyjs/smart-captcha.git"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/pansyjs/smart-captcha/issues"
-  },
-  "homepage": "https://github.com/pansyjs/smart-captcha#readme",
   "peerDependencies": {
     "react": ">=16.9.0"
   },
@@ -40,6 +42,7 @@
     "@babel/plugin-transform-modules-commonjs": "7.22.5",
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
+    "@eslint-react/eslint-plugin": "^1.15.2",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@testing-library/jest-dom": "5.16.5",
@@ -54,6 +57,8 @@
     "cross-env": "7.0.3",
     "dumi": "^2.4.13",
     "eslint": "^9.13.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
     "father": "^4.5.1",
     "husky": "^9.1.6",
     "jest": "^29.5.0",
