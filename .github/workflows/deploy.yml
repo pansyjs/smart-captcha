@@ -32,9 +32,6 @@ jobs:
 
       - name: Pnpm action
         uses: pnpm/action-setup@v4
-        with:
-          version: latest
-          run_install: true
 
       - name: Build
         run: pnpm build:site
