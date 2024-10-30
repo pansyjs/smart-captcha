@@ -1,14 +1,17 @@
-import React from 'react';
 import { useExternal } from '@pansy/use-external';
+import React from 'react';
 
-export const ApiLoader: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
+interface LoaderProps {
+  children?: React.ReactNode;
+}
+
+export function Loader(props: LoaderProps) {
+  const { children } = props;
   const status = useExternal('//g.alicdn.com/AWSC/AWSC/awsc.js');
 
   return (
     <>
       {(status === 'ready') && children}
     </>
-  )
+  );
 }

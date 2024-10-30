@@ -1,38 +1,37 @@
+import type { SliderCaptchaProps, SmartCaptchaProps, SmartCaptchaRef } from './types';
 import React, { forwardRef } from 'react';
-import { ApiLoader } from './api-loader';
-import BaseSmartCaptcha from './components/Smart';
+import { Loader } from './components/Loader';
 import BaseSliderCaptcha from './components/Slider';
-
-import type { SmartCaptchaProps, SmartCaptchaRef, SliderCaptchaProps } from './types';
+import BaseSmartCaptcha from './components/Smart';
 
 const InternalSmartCaptcha: React.ForwardRefRenderFunction<
   SmartCaptchaRef,
   SmartCaptchaProps
 > = (props, ref) => {
   return (
-    <ApiLoader>
+    <Loader>
       <BaseSmartCaptcha {...props} ref={ref} />
-    </ApiLoader>
-  )
-}
+    </Loader>
+  );
+};
 
 const InternalSliderCaptcha: React.ForwardRefRenderFunction<
   SmartCaptchaRef,
   SliderCaptchaProps
 > = (props, ref) => {
   return (
-    <ApiLoader>
+    <Loader>
       <BaseSliderCaptcha {...props} ref={ref} />
-    </ApiLoader>
-  )
-}
+    </Loader>
+  );
+};
 
 export const SmartCaptcha = forwardRef(InternalSmartCaptcha);
 export const SliderCaptcha = forwardRef(InternalSliderCaptcha);
 
 export type {
-  SmartCaptchaData,
-  SmartCaptchaRef,
-  SmartCaptchaProps,
   SliderCaptchaProps,
+  SmartCaptchaData,
+  SmartCaptchaProps,
+  SmartCaptchaRef,
 } from './types';
