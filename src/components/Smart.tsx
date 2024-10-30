@@ -1,20 +1,18 @@
+import type { SmartCaptchaData, SmartCaptchaProps, SmartCaptchaRef, SmartCaptchaResult } from '../types';
 import React, {
   forwardRef,
-  useRef,
   useEffect,
   useImperativeHandle,
+  useRef,
 } from 'react';
-import { Option } from '../config';
-
-import type { SmartCaptchaProps, SmartCaptchaResult, SmartCaptchaRef, } from '../types';
 
 const SmartCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SmartCaptchaProps> = (
   {
     className,
     style,
     elementId = 'smart-captcha',
-    appkey = Option.appkey,
-    scene = Option.scene,
+    appkey,
+    scene,
     width = 300,
     height = 42,
     defaultTxt = '点击按钮开始智能验证',
@@ -44,9 +42,9 @@ const SmartCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SmartCaptcha
           // 声明智能验证需要渲染的目标元素ID。
           renderTo: `#${elementId}`,
           // 智能验证组件的宽度。
-          width: width,
+          width,
           // 智能验证组件的高度。
-          height: height,
+          height,
           // 智能验证组件初始状态文案。
           default_txt: defaultTxt,
           // 智能验证组件验证通过状态文案。
@@ -61,30 +59,31 @@ const SmartCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SmartCaptcha
           scene,
           language,
           upLang,
-          success: function(data: SmartCaptchaResult) {
-            const value = {
+          success(data: SmartCaptchaResult) {
+            const value: SmartCaptchaData = {
               sig: data.sig,
               token: data.token,
               sessionId: data.sessionId,
-              appKey: Option.appkey,
-              scene: Option.scene,
-            }
+              appKey: appkey!,
+              scene: scene!,
+            };
             onChange?.(value);
             onSuccess?.(value);
           },
-          fail: function() {
+          fail() {
             ic?.current?.reset();
             onFailed?.();
             onChange?.(undefined);
           },
-          error: function() {
+          error() {
             ic?.current?.reset();
             onFailed?.();
             onChange?.(undefined);
           },
-        })
-      })
+        });
+      });
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

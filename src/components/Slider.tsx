@@ -1,11 +1,11 @@
+import type { SliderCaptchaProps, SmartCaptchaRef, SmartCaptchaResult } from '../types';
+
 import React, {
   forwardRef,
-  useRef,
   useEffect,
   useImperativeHandle,
+  useRef,
 } from 'react';
-
-import type { SmartCaptchaResult, SmartCaptchaRef, SliderCaptchaProps } from '../types';
 
 const SliderCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SliderCaptchaProps> = (
   {
@@ -43,36 +43,37 @@ const SliderCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SliderCaptc
           scene,
           renderTo: `${elementId}`,
           // 智能验证组件的宽度。
-          width: width,
+          width,
           foreign,
           language,
           upLang,
           fontSize,
           hideErrorCode,
-          success: function(data: SmartCaptchaResult) {
+          success(data: SmartCaptchaResult) {
             const value = {
               sig: data.sig,
               token: data.token,
               sessionId: data.sessionId,
               appKey: appkey,
               scene,
-            }
+            };
             onChange?.(value);
             onSuccess?.(value);
           },
-          fail: function() {
+          fail() {
             nc?.current?.reset();
             onChange?.(undefined);
             onFailed?.();
           },
-          error: function() {
+          error() {
             nc?.current?.reset();
             onChange?.(undefined);
             onError?.();
           },
-        })
-      })
+        });
+      });
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
