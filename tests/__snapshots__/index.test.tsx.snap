@@ -1,11 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SmartCaptcha renders correctly 1`] = `
-<div
-  id="smart-captcha"
-/>
-`;
-
 exports[`smartCaptcha renders correctly 1`] = `
 <div
   id="smart-captcha"
