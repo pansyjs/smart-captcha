@@ -1,3 +1,4 @@
+import type { LoaderProps } from './components/Loader';
 import type { SliderCaptchaProps, SmartCaptchaProps, SmartCaptchaRef } from './types';
 import React, { forwardRef } from 'react';
 import { Loader } from './components/Loader';
@@ -6,22 +7,25 @@ import BaseSmartCaptcha from './components/Smart';
 
 const InternalSmartCaptcha: React.ForwardRefRenderFunction<
   SmartCaptchaRef,
-  SmartCaptchaProps
+  SmartCaptchaProps & Omit<LoaderProps, 'children'>
 > = (props, ref) => {
+  const { loading, ...rest } = props;
   return (
-    <Loader>
-      <BaseSmartCaptcha {...props} ref={ref} />
+    <Loader loading={loading}>
+      <BaseSmartCaptcha {...rest} ref={ref} />
     </Loader>
   );
 };
 
 const InternalSliderCaptcha: React.ForwardRefRenderFunction<
   SmartCaptchaRef,
-  SliderCaptchaProps
+  SliderCaptchaProps & Omit<LoaderProps, 'children'>
 > = (props, ref) => {
+  const { loading, ...rest } = props;
+
   return (
-    <Loader>
-      <BaseSliderCaptcha {...props} ref={ref} />
+    <Loader loading={loading}>
+      <BaseSliderCaptcha {...rest} ref={ref} />
     </Loader>
   );
 };
