@@ -5,3 +5,9 @@ exports[`SmartCaptcha renders correctly 1`] = `
   id="smart-captcha"
 />
 `;
+
+exports[`smartCaptcha renders correctly 1`] = `
+<div
+  id="smart-captcha"
+/>
+`;

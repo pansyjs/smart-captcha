@@ -1,14 +1,14 @@
+import { act, fireEvent, render } from '@testing-library/react';
 import * as React from 'react';
-import { render, fireEvent, act } from '@testing-library/react';
-import { ApiLoader } from '../src/api-loader';
+import { Loader } from '../src/components/Loader';
 
-describe('ApiLoader', () => {
+describe('apiLoader', () => {
   it('should be defined', () => {
-    expect(ApiLoader).toBeDefined();
+    expect(Loader).toBeDefined();
   });
 
   it('renders correctly', async () => {
-    const { container } = render(<ApiLoader>children</ApiLoader>);
+    const { container } = render(<Loader>children</Loader>);
 
     const script = document.querySelector('script')!;
 

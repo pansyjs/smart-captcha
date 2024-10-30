@@ -1,16 +1,16 @@
+import { act, fireEvent, render } from '@testing-library/react';
 import * as React from 'react';
-import { act, render, fireEvent, } from '@testing-library/react';
 import { SmartCaptcha, type SmartCaptchaRef } from '../src';
 
-const executeLoaderCallback = async (e?: string | Error): Promise<void> => {
+async function executeLoaderCallback(_?: string | Error): Promise<void> {
   await act(async () => {
     const script = document.querySelector('script')!;
 
     fireEvent.load(script);
   });
-};
+}
 
-describe('SmartCaptcha', () => {
+describe('smartCaptcha', () => {
   it('should be defined', () => {
     expect(SmartCaptcha).toBeDefined();
   });
@@ -29,7 +29,8 @@ describe('SmartCaptcha', () => {
     expect(() => render(<SmartCaptcha />)).not.toThrow();
   });
 
-  it('SmartCaptcha ref', async () => {
+  it('smartCaptcha ref', async () => {
+    // eslint-disable-next-line react/no-create-ref
     const ref = React.createRef<SmartCaptchaRef>();
 
     render(<SmartCaptcha ref={ref} />);
