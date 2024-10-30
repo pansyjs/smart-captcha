@@ -1,13 +1,13 @@
-import React, { useRef } from 'react';
-import { Button, Space } from 'antd';
 import { SmartCaptcha, type SmartCaptchaRef } from '@pansy/smart-captcha';
+import { Button, Space } from 'antd';
+import React, { useRef } from 'react';
 
-export default () => {
+function Demo() {
   const ref = useRef<SmartCaptchaRef>();
 
   const handleRest = () => {
     ref.current?.reset();
-  }
+  };
 
   return (
     <Space direction="vertical" size={24}>
@@ -15,6 +15,7 @@ export default () => {
         ref={ref}
         elementId="smart-captcha-01"
         onSuccess={(data) => {
+          // eslint-disable-next-line no-console
           console.log(data);
         }}
       />
@@ -22,5 +23,7 @@ export default () => {
         重置
       </Button>
     </Space>
-  )
+  );
 }
+
+export default Demo;

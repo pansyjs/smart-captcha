@@ -1,18 +1,19 @@
-import React, { useRef } from 'react';
-import { Button, Space, Form } from 'antd';
 import { SmartCaptcha, type SmartCaptchaRef } from '@pansy/smart-captcha';
+import { Button, Form, Space } from 'antd';
+import React, { useRef } from 'react';
 
-export default () => {
+function Demo() {
   const ref = useRef<SmartCaptchaRef>();
   const [form] = Form.useForm();
 
   const handleReset = () => {
     ref.current?.reset();
-  }
+  };
 
   const handleSubmit = () => {
+    // eslint-disable-next-line no-console
     console.log(form.getFieldsValue());
-  }
+  };
 
   return (
     <Form form={form}>
@@ -21,6 +22,7 @@ export default () => {
           ref={ref}
           elementId="smart-captcha-02"
           onSuccess={(data) => {
+            // eslint-disable-next-line no-console
             console.log(data);
           }}
         />
@@ -35,5 +37,7 @@ export default () => {
         </Button>
       </Space>
     </Form>
-  )
+  );
 }
+
+export default Demo;

@@ -1,7 +1,7 @@
-import { createConfig, type Config } from '@umijs/test';
+import { type Config, createConfig } from '@umijs/test';
 
 const defaultConfig = createConfig({
-  target: 'browser'
+  target: 'browser',
 });
 
 const config: Config.InitialOptions = {
@@ -9,10 +9,10 @@ const config: Config.InitialOptions = {
   clearMocks: true,
   resetMocks: false,
   transform: {
-    ...defaultConfig.transform
+    ...defaultConfig.transform,
   },
   setupFiles: [...(defaultConfig.setupFiles || [])],
-  setupFilesAfterEnv: [...(defaultConfig.setupFilesAfterEnv || []), './tests/setupFilesAfterEnv.ts']
+  setupFilesAfterEnv: [...(defaultConfig.setupFilesAfterEnv || []), './tests/setupFilesAfterEnv.ts'],
 };
 
 export default config;

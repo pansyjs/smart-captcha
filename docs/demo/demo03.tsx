@@ -1,13 +1,13 @@
-import React, { useRef } from 'react';
-import { Button, Space } from 'antd';
 import { SliderCaptcha, type SmartCaptchaRef } from '@pansy/smart-captcha';
+import { Button, Space } from 'antd';
+import React, { useRef } from 'react';
 
-export default () => {
+function Demo() {
   const ref = useRef<SmartCaptchaRef>();
 
   const handleRest = () => {
     ref.current?.reset();
-  }
+  };
 
   return (
     <Space direction="vertical" size={24}>
@@ -17,10 +17,11 @@ export default () => {
         appkey="CF_APP_1"
         scene="register"
         onSuccess={(data) => {
+          // eslint-disable-next-line no-console
           console.log(data);
         }}
         style={{
-          position: 'relative'
+          position: 'relative',
         }}
       />
 
@@ -28,5 +29,7 @@ export default () => {
         重置
       </Button>
     </Space>
-  )
+  );
 }
+
+export default Demo;

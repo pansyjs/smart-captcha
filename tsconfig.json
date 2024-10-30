@@ -1,36 +1,39 @@
 {
   "compilerOptions": {
-    "rootDirs": [
-      "src",
-      "config"
-    ],
     "target": "ES6",
-    "moduleResolution": "node",
     "jsx": "react",
-    "allowJs": true,
-    "declaration": true,
-    "esModuleInterop": true,
-    "importHelpers": true,
-    "downlevelIteration": true,
-    "sourceMap": true,
-    "baseUrl": "./",
     "lib": [
       "ES2015",
       "DOM"
     ],
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "resolveJsonModule": true,
+    "baseUrl": "./",
+    "rootDirs": [
+      "src",
+      "config"
+    ],
+    "moduleResolution": "node",
     "paths": {
+      "@pansy/smart-captcha": ["./src/index.ts"],
+      "@pansy/smart-captcha/*": ["./src/*"],
       "@@/*": [
         ".dumi/tmp/*"
       ]
-    }
+    },
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "declaration": true,
+    "downlevelIteration": true,
+    "importHelpers": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
   "include": [
     "src",
+    "docs/demo",
     ".dumirc.ts"
   ],
   "exclude": [
