@@ -1,6 +1,6 @@
 {
   "name": "@pansy/smart-captcha",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "packageManager": "pnpm@9.12.3",
   "description": "阿里巴巴集团提供的一种智能验证码解决方案",
   "license": "MIT",

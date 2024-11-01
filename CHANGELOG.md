@@ -1,3 +1,10 @@
+# [3.3.0](https://github.com/pansyjs/smart-captcha/compare/v3.2.0...v3.3.0) (2024-11-01)
+
+
+### Features
+
+* 优化加载效果时机 ([29623d6](https://github.com/pansyjs/smart-captcha/commit/29623d6b98a74effecd93aff48030afab5c74a5f))
+
 # [3.2.0](https://github.com/pansyjs/smart-captcha/compare/v3.1.0...v3.2.0) (2024-11-01)
 
 
