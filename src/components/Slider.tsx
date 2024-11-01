@@ -1,10 +1,11 @@
 import type { SliderCaptchaProps, SmartCaptchaRef, SmartCaptchaResult } from '../types';
-
+import { useExternal } from '@pansy/use-external';
 import React, {
   forwardRef,
   useEffect,
   useImperativeHandle,
   useRef,
+  useState,
 } from 'react';
 
 const SliderCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SliderCaptchaProps> = (
@@ -20,6 +21,7 @@ const SliderCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SliderCaptc
     upLang,
     hideErrorCode,
     fontSize,
+    loading,
     onSuccess,
     onChange,
     onFailed,
@@ -28,6 +30,8 @@ const SliderCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SliderCaptc
   ref,
 ) => {
   const nc = useRef<SmartCaptchaRef>();
+  const [isLoading, setIsLoading] = useState(true);
+  const status = useExternal('//g.alicdn.com/AWSC/AWSC/awsc.js');
 
   useImperativeHandle(ref, () => ({
     reset: () => {
@@ -36,7 +40,8 @@ const SliderCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SliderCaptc
   }));
 
   useEffect(() => {
-    if (window.AWSC && !nc.current) {
+    if (status === 'ready' && window.AWSC && !nc.current) {
+      setIsLoading(false);
       window.AWSC.use('nc', (_: string, module: any) => {
         nc.current = module.init({
           appkey,
@@ -74,10 +79,18 @@ const SliderCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SliderCaptc
       });
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [status]);
+
+  if (!loading) {
+    return (
+      <div className={className} style={style} id={elementId} />
+    );
+  }
 
   return (
-    <div className={className} style={style} id={elementId} />
+    <div className={className} style={style} id={elementId}>
+      {isLoading && loading}
+    </div>
   );
 };
 

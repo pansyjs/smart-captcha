@@ -1,9 +1,11 @@
 import type { SmartCaptchaData, SmartCaptchaProps, SmartCaptchaRef, SmartCaptchaResult } from '../types';
+import { useExternal } from '@pansy/use-external';
 import React, {
   forwardRef,
   useEffect,
   useImperativeHandle,
   useRef,
+  useState,
 } from 'react';
 
 const SmartCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SmartCaptchaProps> = (
@@ -21,13 +23,16 @@ const SmartCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SmartCaptcha
     failTxt = '验证失败，请在此点击按钮刷新',
     language,
     upLang,
+    loading,
     onSuccess,
     onChange,
     onFailed,
   },
   ref,
 ) => {
+  const [isLoading, setIsLoading] = useState(true);
   const ic = useRef<SmartCaptchaRef>();
+  const status = useExternal('//g.alicdn.com/AWSC/AWSC/awsc.js');
 
   useImperativeHandle(ref, () => ({
     reset: () => {
@@ -36,7 +41,8 @@ const SmartCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SmartCaptcha
   }));
 
   useEffect(() => {
-    if (window.AWSC && !ic.current) {
+    if (status === 'ready' && window.AWSC && !ic.current) {
+      setIsLoading(false);
       window.AWSC.use('ic', (_: string, module: any) => {
         ic.current = module.init({
           // 声明智能验证需要渲染的目标元素ID。
@@ -84,10 +90,18 @@ const SmartCaptcha: React.ForwardRefRenderFunction<SmartCaptchaRef, SmartCaptcha
       });
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [status]);
+
+  if (!loading) {
+    return (
+      <div className={className} style={style} id={elementId} />
+    );
+  }
 
   return (
-    <div className={className} style={style} id={elementId} />
+    <div className={className} style={style} id={elementId}>
+      {isLoading && loading}
+    </div>
   );
 };
 

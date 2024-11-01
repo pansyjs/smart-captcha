@@ -10,7 +10,7 @@ export interface Lang {
   /** 加载状态提示 */
   LOADING?: string;
   /** 等待滑动状态提示 */
-  SLIDE?:  string;
+  SLIDE?: string;
   /** 验证通过状态提示 */
   SUCCESS?: string;
   /** 验证失败触发拦截状态提示 */
@@ -40,6 +40,16 @@ export interface CommonProps {
   scene: string;
   /** 渲染的目标元素ID */
   elementId?: string;
+  /** 加载过程中 dom */
+  loading?: React.ReactNode;
+  /**
+   * 测试字段，用于测试验证码的不同状态
+   */
+  test?: string;
+  /**
+   * 用于验证码的自定义文案
+   */
+  upLang?: Record<string, Lang>;
   /**
    * 验证通过时触发
    */
@@ -58,20 +68,7 @@ export interface CommonProps {
   onError?: (data?: any) => void;
 }
 
-export interface SmartCaptchaProps {
-  /** 应用类型标识 */
-  appkey?: string;
-  /** 使用场景标识 */
-  scene?: string;
-  /** 节点类名 */
-  className?: string;
-  /** 节点样式 */
-  style?: CSSProperties;
-  /**
-   * 渲染的目标元素ID
-   * @default 'smart-captcha'
-   */
-  elementId?: string;
+export interface SmartCaptchaProps extends CommonProps {
   /**
    * 智能验证组件初始状态文案
    */
@@ -90,25 +87,6 @@ export interface SmartCaptchaProps {
    */
   language?: string;
   /**
-   * 二次验证时，用于自定义文案。
-   */
-  upLang?: Record<string, {
-    /** 加载状态提示 */
-    LOADING?: string;
-    /** 等待滑动状态提示 */
-    SLIDE?:  string;
-    /** 验证通过状态提示 */
-    SUCCESS?: string;
-    /** 验证失败触发拦截状态提示 */
-    ERROR?: string;
-    /** 验证失败触发拦截状态提示 */
-    FAIL?: string;
-  }>;
-  /**
-   * 测试字段，用于测试验证码的不同状态
-   */
-  test?: string;
-  /**
    * 智能验证组件验证中状态文案
    */
   scaningTxt?: string;
@@ -116,18 +94,6 @@ export interface SmartCaptchaProps {
   width?: number;
   /** 组件高度 */
   height?: number;
-  /**
-   * 验证通过时触发
-   */
-  onSuccess?: (data: SmartCaptchaData) => void;
-  /**
-   * 验证失败时触发
-   */
-  onFailed?: () => void;
-  /**
-   * 验证通过/失败都会触发
-   */
-  onChange?: (data?: SmartCaptchaData | undefined) => void;
 }
 
 export interface SliderCaptchaProps extends CommonProps {
@@ -150,11 +116,6 @@ export interface SliderCaptchaProps extends CommonProps {
    * @default false。
    */
   hideErrorCode?: boolean;
-  /**
-   * 用于验证码的自定义文案
-   */
-  upLang?: Record<string, Lang>;
-  test?: string;
 }
 
 export interface SmartCaptchaRef {
