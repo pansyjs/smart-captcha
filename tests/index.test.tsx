@@ -16,9 +16,9 @@ describe('smartCaptcha', () => {
   });
 
   it('renders correctly', async () => {
-    const { container } = render(<SmartCaptcha />);
+    const { container } = render(<SmartCaptcha appkey="test" scene="test" />);
 
-    expect(container.innerHTML).toBe('');
+    expect(container.innerHTML).toBe('<div id="smart-captcha"></div>');
 
     await executeLoaderCallback();
 
@@ -26,14 +26,14 @@ describe('smartCaptcha', () => {
   });
 
   it('mount correctly', async () => {
-    expect(() => render(<SmartCaptcha />)).not.toThrow();
+    expect(() => render(<SmartCaptcha appkey="test" scene="test" />)).not.toThrow();
   });
 
   it('smartCaptcha ref', async () => {
     // eslint-disable-next-line react/no-create-ref
     const ref = React.createRef<SmartCaptchaRef>();
 
-    render(<SmartCaptcha ref={ref} />);
+    render(<SmartCaptcha appkey="test" scene="test" ref={ref} />);
 
     await executeLoaderCallback();
 
